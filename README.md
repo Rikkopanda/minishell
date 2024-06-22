@@ -1,18 +1,12 @@
 # 42-minishell
 
-The objective of this project is to create a simple shell, like an own little bash.<br>
-It is the first group project in the 42 core curriculum. <b>([tjensen42](https://github.com/tjensen42) && [hepple42](https://github.com/hepple42))</b>
+The objective of this project is to create a simple shell, like an own little bash.
+It is the first group project at Codam college (42 core curriculum).
 
 ## Project specifications
 
-For the project we were allowed to use GNU's readline library which handles the terminal interaction (history & input reading).
-For everything else the subject allows only to use a few low-level functions and a few POSIX system calls.
-
-<b>Allowed functions:</b>
-```readline, rl_clear_history, rl_on_new_line,rl_replace_line, rl_redisplay, add_history, printf, malloc, free, write, access, open, read,close, fork, wait, waitpid, wait3, wait4, signal, sigaction, sigemptyset, sigaddset, kill, exit, getcwd, chdir, stat, lstat, fstat, unlink, execve, dup, dup2, pipe, opendir, readdir, closedir, strerror, perror, isatty, ttyname, ttyslot, ioctl, getenv, tcsetattr, tcgetattr, tgetent, tgetflag, tgetnum, tgetstr, tgoto, tputs```
-
+A shell is a program which a user can interactively run programs, open/read files and write/append to files.
 ## Features
-
 ### Basics:
 - History of previous entered commands
 - Search and launch the right executable (based on the PATH variable, using a relative or an absolute path)
@@ -24,7 +18,7 @@ For everything else the subject allows only to use a few low-level functions and
 - ```$?``` expands to the last exit status
 - ```|``` connect cmds or groups with pipes; output of a cmd is connected to the input of the next cmd via a pipe
 - ```&&``` and ```||``` with parenthesis for priorities
-
+- 
 ### Builtins:
 - ```echo``` with option -n
 - ```cd``` (relative or absolute path, ```-``` for OLDPWD, without arg for HOME)
@@ -45,33 +39,26 @@ For everything else the subject allows only to use a few low-level functions and
 
 ## How to use
 
-The current version of minishell is developed and tested on macOS, but it should work on all UNIX/LINUX based systems as well.
-
-<b>Requirements:</b>
-- GCC / CLANG Compiler
-- GNU Make
-- GNU Readline library
+The current version of minishell is developed and tested on linux and macos.
 
 ```
-git clone https://github.com/tjensen42/42-minishell.git minishell
+git clone git@github.com:Rikkopanda/minishell.git minishell
 ```
 ```
-cd minishell && make release
+cd minishell && make
 ```
 ```
 ./minishell
 ```
-
+run commands, programs, do anything you want as you would in bash(some limitations ofcourse)
 ## Dependencies
 ### Install readline with [brew](https://brew.sh/)
 ```
 brew install readline
 ```
-
 ```
 brew link --force readline
 ```
-
 Add the path to the lib
 
 Replace ~/.zshrc with ~/.bashrc if you use bash instead of zsh
@@ -125,30 +112,15 @@ make test
 
 Enter minishell and export the DEBUG env:
 
+
+## Learning experience/conclusion
+It was a great challenge building this project, it took 3 months to complete it.
+During this project I learned about working in a team of 2 on a big project.
+
+
 ```
 export DEBUG=printer
 ```
 
 For all next commands you will execute in the minishell you will see the different processing steps from the lexer and parser with syntax highlighting.
-
-## Change the command line prompt
-1. Enter the SHELL
-```
-./minishell
-```
-2. Export the PS1 env (also works in Bash and other similar shells)
-```
-export PS1='enter your prompt wish...$ '
-```
-
-
-<br>
-<hr>
-<b>*All 42 projects must be written in C (later C++) in accordance to the 42 School Norm.<br></b>
-<br>
-
-> #### Sample restrictions:
-> - All variables have to be declared and aligned at the top of each function
-> - Each function can not have more then 25 lines
-> - Projects should be created with allowed std functions otherwise it is cheating
 
