@@ -2,6 +2,7 @@
 
 The objective of this project is to create a simple shell, like an own little bash.
 It is the first group project at Codam college (42 core curriculum).
+Group: @ILeXeIR and @Rikkopanda
 
 ## Project specifications
 
