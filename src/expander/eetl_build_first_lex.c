@@ -6,7 +6,7 @@
 /*   By: rikverhoeven <rikverhoeven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:19:11 by rikverhoeve       #+#    #+#             */
-/*   Updated: 2024/04/27 17:15:50 by rikverhoeve      ###   ########.fr       */
+/*   Updated: 2024/08/01 12:02:27 by rikverhoeve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	join_previous_parts_to_str(t_parameter_pts_holder *p,
 	tmpstr = join_strparts_except_last(*p->str_part_lst, p->buffer);
 	if (tmpstr == (char *)FALSE && *p->original_pre_env == '\0')
 		return (ERROR);
-	*totalstr = ft_strjoin_v2(tmpstr, p->original_pre_env);
+	*totalstr = ft_strjoin(tmpstr, p->original_pre_env);
 	if (tmpstr != (char *)FALSE)
 		free(tmpstr);
 	if (!*totalstr)
@@ -86,7 +86,7 @@ void	build_default_case(t_parameter_pts_holder *p)
 		build_case_no_parts_to_join(p, wild_card_quotes_check);
 		return ;
 	}
-	total_str_2 = ft_strjoin_v2(total_str, p->expanded_substr);
+	total_str_2 = ft_strjoin(total_str, p->expanded_substr);
 	if (total_str)
 		free(total_str);
 	if (!total_str_2)

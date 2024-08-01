@@ -106,7 +106,7 @@ FLAGS = -g $(LINKING) \
 
 all: $(OBJDIR) $(NAME)
 
-LIBFTLIB = libft/
+LIBFTLIB = Libft/
 LIBFTA = $(LIBFTLIB)libft.a
 
 $(OBJDIR):

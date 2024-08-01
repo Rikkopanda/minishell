@@ -6,7 +6,7 @@
 /*   By: rikverhoeven <rikverhoeven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 18:43:08 by rverhoev          #+#    #+#             */
-/*   Updated: 2024/04/27 14:43:54 by rikverhoeve      ###   ########.fr       */
+/*   Updated: 2024/08/01 12:02:20 by rikverhoeve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	joining_strpart_to_env_expanded_lex(t_parameter_pts_holder *p,
 {
 	char	*total_str;
 
-	total_str = ft_strjoin_v2(lex_lstlast(buffer->lexer_list)->word,
+	total_str = ft_strjoin(lex_lstlast(buffer->lexer_list)->word,
 			p->expanded_substr);
 	if (!total_str)
 		clean_and_exit(MALLOC_ERROR, buffer);
@@ -57,7 +57,7 @@ void	build_case_no_parts_to_join(t_parameter_pts_holder *p,
 		build_new_lex(p, &wild_card_quotes_check, total_str_2);
 	else
 	{
-		total_str_3 = ft_strjoin_v2(lex_lstlast
+		total_str_3 = ft_strjoin(lex_lstlast
 				(p->buffer->lexer_list)->word, total_str_2);
 		if (!total_str_3)
 			clean_and_exit(MALLOC_ERROR, p->buffer);
@@ -72,7 +72,7 @@ void	build_case_glue_to_last_lex(t_parameter_pts_holder *p,
 {
 	char	*total_str_3;
 
-	total_str_3 = ft_strjoin_v2(lex_lstlast
+	total_str_3 = ft_strjoin(lex_lstlast
 			(p->buffer->lexer_list)->word, total_str_2);
 	free(total_str_2);
 	if (!total_str_3)

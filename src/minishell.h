@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        ::::::::            */
-/*   minishell.h                                        :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: rverhoev <rverhoev@student.42.fr>            +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2024/02/01 19:36:19 by alpetukh      #+#    #+#                 */
-/*   Updated: 2024/04/29 16:58:52 by alpetukh      ########   odam.nl         */
+/*                                                        :::      ::::::::   */
+/*   minishell.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rikverhoeven <rikverhoeven@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/02/01 19:36:19 by alpetukh          #+#    #+#             */
+/*   Updated: 2024/08/01 11:47:20 by rikverhoeve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # include <sys/types.h>
 # include <sys/wait.h>
 # include <unistd.h>
-# include "../libft/libft.h"
+# include "../Libft/libft.h"
 # include "debug_functions/debug.h"
 # include "lexer/lexer.h"
 # include "expander/expander.h"

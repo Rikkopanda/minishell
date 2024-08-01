@@ -6,7 +6,7 @@
 /*   By: rikverhoeven <rikverhoeven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 20:14:14 by rikverhoeve       #+#    #+#             */
-/*   Updated: 2024/04/29 18:27:15 by rikverhoeve      ###   ########.fr       */
+/*   Updated: 2024/08/01 12:02:27 by rikverhoeve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	expand_str(char	**target_to_expand_ptr, char *str2, t_buffer *buffer)
 	if (!target_tmp_str)
 		clean_and_exit(MALLOC_ERROR, buffer);
 	free(*target_to_expand_ptr);
-	*target_to_expand_ptr = ft_strjoin_v2(target_tmp_str, str2);
+	*target_to_expand_ptr = ft_strjoin(target_tmp_str, str2);
 	if (!*target_to_expand_ptr)
 		clean_and_exit(MALLOC_ERROR, buffer);
 	free(target_tmp_str);

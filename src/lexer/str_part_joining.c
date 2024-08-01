@@ -6,7 +6,7 @@
 /*   By: rikverhoeven <rikverhoeven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 20:19:12 by rikverhoeve       #+#    #+#             */
-/*   Updated: 2024/04/27 14:39:04 by rikverhoeve      ###   ########.fr       */
+/*   Updated: 2024/08/01 12:02:27 by rikverhoeve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	assemble_together_parts(t_joining_vars *v,
 	v->wild_card_quotes_check = scan_strparts_quotes_for_wildcard_check
 		(str_part_lst);
 	v->tmp_str = join_strparts_except_last(str_part_lst, buffer);
-	v->joined_strparts = ft_strjoin_v2(v->tmp_str,
+	v->joined_strparts = ft_strjoin(v->tmp_str,
 			strpart_lstlast(str_part_lst)->part);
 	if (!v->joined_strparts)
 		clean_and_exit(MALLOC_ERROR, buffer);

@@ -6,7 +6,7 @@
 /*   By: rikverhoeven <rikverhoeven@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:43:34 by alpetukh          #+#    #+#             */
-/*   Updated: 2024/04/20 09:55:10 by rikverhoeve      ###   ########.fr       */
+/*   Updated: 2024/08/01 12:02:12 by rikverhoeve      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ char	*get_temp_filename(int i, t_buffer *buffer)
 	num = ft_itoa(i);
 	if (num == NULL)
 		clean_and_exit(MALLOC_ERROR, buffer);
-	filename = ft_strjoin_v2(".heredoc_", num);
+	filename = ft_strjoin(".heredoc_", num);
 	free(num);
 	if (filename == NULL)
 		clean_and_exit(MALLOC_ERROR, buffer);
